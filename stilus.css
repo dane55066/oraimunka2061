@@ -4,16 +4,24 @@ box-sizing: border-box;
     padding: 0px;
  /*kereten kívülilság*/
     margin: 0px;
-}
+    border-radius: 10px;
 
+
+}
+main>*{
+height: 250px;
+background:no-repeat;
+background-size: cover;
+
+}
 
 header{
     grid-area: h;
-    background-image: url ("img/dandelion.jpg");
+    background-image: url("img/dandelion.jpg");
 }
 nav{
     grid-area: n;
-     background-image:ur("img/dand2.jpg");
+     background-image:url("img/dand2.jpg");
 }
 aside{
     grid-area: as;
