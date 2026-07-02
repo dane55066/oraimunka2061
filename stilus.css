@@ -1,22 +1,22 @@
 *{
-box-sizing: border-box;
-/*kereten belüli távolság*/
+    /**/
+    box-sizing: border-box;
+    /*kereten belüli távolság*/
     padding: 0px;
- /*kereten kívülilság*/
+    /*kereten kívüli távolság*/
     margin: 0px;
     border-radius: 10px;
-    color: #ffffff;
-
-
+    color: white;
 }
+
 main>*{
-height: 250px;
-background:no-repeat;
-background-size: cover;
-padding: 10px;
- opacity: 0.4
-
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    opacity: 0.4;   
 }
+
 main>*:hover{
     opacity: 1;
 }
@@ -27,48 +27,77 @@ header{
 }
 nav{
     grid-area: n;
-     background-image:url("img/dand2.jpg");
+    background-image: url("img/dand2.jpg");
 }
 aside{
     grid-area: as;
-    background-image:url("img/dand3.jpg");
+    background-image: url("img/dand3.jpg");
 }
 
 article{
     grid-area: ar;
-    background-image:url("img/dandy2.gif");
-}   
-footer{
-    grid-area:f;
-    background-image:url("img/dandy.gif");
+    background-image: url("img/dandy2.gif");
 }
 
-
+footer{
+    grid-area: f;
+    background-image: url("img/dandy.gif");
+}
 main
 {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-        'h n n'
-        'as f ar';
+    'h n n'
+    'as f ar'
+    ;
+    gap: 10px;
     margin: 10px;
-    width:95%;
-      gap: 10px;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
- a{
-    text-decoration:none; 
-    padding-left: 15px;
+}
+
+article, aside, header, footer{
+    text-align: right;
+}
+
+a{
+    text-decoration: none;
+    padding-right: 15px;
 }
 
 li{
-    list-style-type: none;}
+    list-style-type: none;
+}
+/*verzió1
+ol{
+    display: flex;
+}
+*/
 
 ol li{
-    display:inline}
+    display: inline;
+}
 
 ol{
-    background-color: blue;
+    background-color: rgba(42, 47, 72, 0.7);
+    padding: 10px;
 }
+ /*mobilos nézet*/
+ @media only screen and (max-width: 600px){
+
+ main
+{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+    'h '
+    'n '
+    'as'
+    'f '
+    'ar'
+    ;
 
 }
+ }
